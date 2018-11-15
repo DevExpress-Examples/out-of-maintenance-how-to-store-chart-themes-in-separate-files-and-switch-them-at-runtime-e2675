@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Theme1.xaml](./CS/Themes/Theme1.xaml) (VB: [Theme1.xaml](./VB/Themes/Theme1.xaml))
+* [Theme2.xaml](./CS/Themes/Theme2.xaml) (VB: [Theme2.xaml](./VB/Themes/Theme2.xaml))
+* [Theme3.xaml](./CS/Themes/Theme3.xaml) (VB: [Theme3.xaml](./VB/Themes/Theme3.xaml))
+* [ThemeSelector.cs](./CS/ThemeSelector.cs) (VB: [ThemeSelector.vb](./VB/ThemeSelector.vb))
+* [Window1.xaml](./CS/Window1.xaml) (VB: [Window1.xaml](./VB/Window1.xaml))
+* [Window1.xaml.cs](./CS/Window1.xaml.cs) (VB: [Window1.xaml](./VB/Window1.xaml))
+<!-- default file list end -->
 # How to store chart themes in separate files and switch them at runtime
 
 
