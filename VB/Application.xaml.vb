@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Windows
+﻿Imports System.Windows
 
 Namespace ChartDynamicStylingWpf
 	''' <summary>
@@ -7,5 +6,6 @@ Namespace ChartDynamicStylingWpf
 	''' </summary>
 	Partial Public Class App
 		Inherits Application
+
 	End Class
 End Namespace

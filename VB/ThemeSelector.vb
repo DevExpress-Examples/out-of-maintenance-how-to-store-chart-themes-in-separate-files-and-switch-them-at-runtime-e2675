@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Windows
@@ -7,10 +6,12 @@ Imports System.Windows
 Namespace Styling
 	Public Class ThemeResourceDictionary
 		Inherits ResourceDictionary
+
 	End Class
 
 	Public Class ThemeSelector
 		Inherits DependencyObject
+
 		Public Shared ReadOnly CurrentThemeDictionaryProperty As DependencyProperty = DependencyProperty.RegisterAttached("CurrentThemeDictionary", GetType(Uri), GetType(ThemeSelector), New UIPropertyMetadata(Nothing, AddressOf CurrentThemeDictionaryChanged))
 
 		Public Shared Function GetCurrentThemeDictionary(ByVal obj As DependencyObject) As Uri
@@ -38,14 +39,14 @@ Namespace Styling
 			End If
 
 			' find if the target element already has a theme applied
-			Dim existingDictionaries As List(Of ThemeResourceDictionary) = ( _
-					From dictionary In targetElement.Resources.MergedDictionaries.OfType(Of ThemeResourceDictionary)() _
-					Select dictionary).ToList()
+			Dim existingDictionaries As List(Of ThemeResourceDictionary) = (
+				From dictionary In targetElement.Resources.MergedDictionaries.OfType(Of ThemeResourceDictionary)()
+				Select dictionary).ToList()
 
 			' remove the existing dictionaries 
 			For Each thDictionary As ThemeResourceDictionary In existingDictionaries
-				If themeDictionary Is thDictionary Then ' don't remove the newly added dictionary
-					Continue For
+				If themeDictionary Is thDictionary Then
+					Continue For ' don't remove the newly added dictionary
 				End If
 				targetElement.Resources.MergedDictionaries.Remove(thDictionary)
 			Next thDictionary
